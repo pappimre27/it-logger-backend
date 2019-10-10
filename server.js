@@ -1,6 +1,10 @@
 const express = require('express');
+const connectDB = require('./config/db');
 
 const app = express(); // init
+
+// Connect Database
+connectDB();
 
 app.get('/', (req, res) =>
   res.send({ msg: 'Welcome to the it logger api...' })
